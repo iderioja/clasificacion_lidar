@@ -1,0 +1,2329 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files\FME\fme.exe" U:\cartogra\Ana\Trabajo_ana\lidar_2016\procesos_fme_lidar\lidar_ndvi_point_cloud_fme.fmw
+#          --DestDataset_LAS "C:\Trabajo_Ana\proceso_las_rioja\salida_classify_ndvi_1x1"
+#          --SourceDataset_LAS "C:\Trabajo_Ana\proceso_las_rioja\salida_classify_merge\597000_4676000_merge.laz"
+#    
+#    
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   PASSWORD=""
+#!   FME_BUILD_NUM="16492"
+#!   VIEW_POSITION="1302.1 -737.187"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DESTINATION="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_DOCUMENT_GUID="9b11b5cb-108a-474e-bf41-add2327c3b33"
+#!   DESCRIPTION=""
+#!   WORKSPACE_VERSION="1"
+#!   REQUIREMENTS=""
+#!   SHOW_INFO_NODES="true"
+#!   LAST_SAVE_BUILD="FME(R) 2016.1.0.0 (20160419 - Build 16492 - WIN64)"
+#!   END_PYTHON=""
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   REQUIREMENTS_KEYWORD=""
+#!   LEGAL_TERMS_CONDITIONS=""
+#!   ZOOM_SCALE="78"
+#!   PYTHON_COMPATIBILITY="27"
+#!   SOURCE="NONE"
+#!   FME_DOCUMENT_PRIORGUID="7eb0a7b5-339f-4ac4-98b7-ffd1e5cbbeb3,0c946044-787e-42e5-a39c-7046616370f9,a432ce00-b5e8-4578-bdcf-ff9b05018bdd,0b3941e3-3fb4-4bba-baca-bd39e0122f6b,4fde5b65-bde4-45c8-a6fb-e1c8ae3acb32,a7be8aae-1cac-4a31-9f56-11d0d34244b7,43f12f7c-227c-47b3-a85b-ffbdf2f5f20f,9a23cef1-f92e-427e-af27-ca6fa4b4ece8,eefe7224-332d-43fa-b57a-3c9be45ba68c,8be09aab-eb18-4858-9e4d-fe5f8294b1d2,5152e015-22a6-41ee-b502-0cf457d7b3e5,169c32c6-8f7b-45ef-a6a2-d069afdb4476,612dd441-cd8b-45f9-bd47-dbb03b32c799,fce4c6df-3074-482f-8c98-023e4f7f5589,8de74c77-c857-4514-bff5-8621b754e4e6,ad01f2fc-ecc0-41df-9f57-55ae12ac978a,4d24ebdb-0667-4d82-9b2a-b54d3dc4322a,2335233d-6991-4dc5-a86f-757d3edec34d,0824401b-32a5-4e5d-9c98-a90521378f70,1a85a4a5-f5bb-4fe9-ac80-9afb09b07946,8b6235a0-93fa-4d1b-a56e-80ef8a9b5e0b,087c91ad-57c8-41ad-abde-b400c7782677,4ebadb2a-4a07-405c-9659-44d967f2014c,52562fb8-bfea-4c40-9fef-f0ff17f0a966,3acd675f-a25c-406b-8947-ce71d62fff35,08a7e4f7-1fd0-478d-9823-9661e980be06,049eacf3-1b25-4031-9e7f-e28c63672380,cf749f9e-8f0a-4117-9418-b15e85cb5b01,1ccb6dbc-c8e8-48f5-a8a7-0f6edcd58297,a7999329-29c4-4eb3-8531-097bec6a04ea,5cdd8104-f785-42f5-a70d-2b3c21f01813,dfef50e3-f28f-41de-b14d-41795e7c10cf,acf44940-ce56-43be-bca2-3db96d1698e7,170a809d-6b80-4371-88af-cda98fa04043,bf6c0ffe-832b-47de-b353-0f6ae2653605,b0f6e969-49bb-411d-a7f9-7e8c588d039a"
+#!   SHOW_ANNOTATIONS="true"
+#!   MAX_LOG_FEATURES="200"
+#!   FME_SERVER_SERVICES=""
+#!   BEGIN_TCL=""
+#!   REDIRECT_TERMINATORS="NONE"
+#!   TITLE=""
+#!   DOC_TOP_LEFT="-2837.05 -3375.79"
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_DATE="2017-05-30T09:19:07"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   LOG_FILE=""
+#!   CATEGORY=""
+#!   USAGE=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   HISTORY=""
+#!   DOC_EXTENTS="10798.3 3965.4"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   BEGIN_PYTHON=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="LAS"
+#!   DATASET="$(SourceDataset_LAS)"
+#!   KEYWORD="LAS_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fme_secondary_axis number(31,15) las_type char(255) las_project_id char(36) fme_dataset char(50) las_file_creation_date date fme_start_angle number(31,15) las_generating_software char(32) las_vertical_units_code number(6,0) las_version char(3) fme_basename char(50) fme_fill_color char(50) fme_feature_type char(50) fme_text_size number(31,15) fme_type char(50) fme_geometry fme_char(50) las_synthetic_returns logical las_vertical_datum_code number(6,0) fme_rotation number(31,15) las_file_source_id number(6,0) fme_sweep_angle number(31,15) las_zlas_rearranged_points logical fme_primary_axis number(31,15) fme_color char(50) multi_reader_type char(50) las_system_identifier char(32) las_vertical_coordsys_code number(6,0) fme_text_string char(50) multi_reader_id number(11,0) multi_reader_keyword char(50) las_gps_time_type number(1,0) multi_reader_full_id number(11,0)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   GENERATE_FME_BUILD_NUM="16492"
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MAX_FEATURES=""
+#!   FEATURE_TYPES=""
+#!   COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the LAS file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="LAS File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="AUTO_FANOUT_ATTRIBUTE"
+#!   VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_AUTO_EXPOSE"
+#!   VALUE="fme_basename char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="LAS_IN_SEARCH_ENVELOPE_MINX LAS_IN_SEARCH_ENVELOPE_MINY LAS_IN_SEARCH_ENVELOPE_MAXX LAS_IN_SEARCH_ENVELOPE_MAXY LAS_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="las file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the LAS file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="LAS"
+#!   DATASET="$(DestDataset_LAS)"
+#!   KEYWORD="LAS_2"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="60"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fme_secondary_axis number(31,15) las_type char(255) las_project_id char(36) fme_dataset char(50) las_file_creation_date date fme_start_angle number(31,15) las_generating_software char(32) las_vertical_units_code number(6,0) fme_basename char(50) fme_fill_color char(50) fme_feature_type char(50) fme_text_size number(31,15) fme_type char(50) fme_geometry fme_char(50) las_synthetic_returns logical las_vertical_datum_code number(6,0) fme_rotation number(31,15) las_file_source_id number(6,0) fme_sweep_angle number(31,15) las_zlas_rearranged_points logical fme_primary_axis number(31,15) fme_color char(50) las_system_identifier char(32) las_vertical_coordsys_code number(6,0) fme_text_string char(50) las_gps_time_type number(1,0)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   GENERATE_FME_BUILD_NUM="16492"
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_GROUP="NO"
+#!   COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the LAS file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="LAS File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="AUTO_FANOUT_ATTRIBUTE"
+#!   VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_AUTO_EXPOSE"
+#!   VALUE="fme_basename char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="las file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the LAS file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="LAS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="LAS"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="las_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="las_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="LAS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="LAS"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="LAS"
+#!   FEATURE_TYPE_NAME="@Value(fme_basename)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="78"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="7961.2 -1457.45"
+#!   BOUNDING_RECT="7961.2 -1457.45 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="false"
+#!   KEYWORD="LAS_2"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="LAS"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="99"
+#!   FEAT_GEOMTYPE="las_point_cloud"
+#!   POSITION="-2762.61 -1128.35"
+#!   BOUNDING_RECT="-2762.61 -1128.35 -1 -1"
+#!   ORDER="5e+14"
+#!   COLLAPSED="false"
+#!   KEYWORD="LAS_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI DIRNAME DestDataset_LAS Destination ASPRS LAS Folder:"
+#!   DEFAULT_VALUE="C:\Trabajo_Ana\proceso_las_rioja\salida_classify_ndvi_1x1"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_LAS LAS_Files(*.las;*.laz;*.zlas;*.lasd)|*.las;*.laz;*.zlas;*.lasd|LAS_Files(*.las)|*.las|Compressed_LAS_Files(*.laz)|*.laz|Esri_Optimized_LAS_Files(*.zlas)|*.zlas|Esri_LAS_Dataset_Files(*.lasd)|*.lasd|All_files(*)|* Source ASPRS LAS File(s):"
+#!   DEFAULT_VALUE="C:\Trabajo_Ana\proceso_las_rioja\salida_classify_merge\597000_4676000_merge.laz"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="27"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;0  Created, never classified &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;1 Unclassified&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;2 Ground &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;3 Low Vegetation &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;4 Medium Vegetation &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;5 High Vegetation &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;6 Building &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;7 Low Point (noise) &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;8  Model Key-point (mass point) &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;9 Water &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;10 Reserved for ASPRS Definition &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;11 Reserved for ASPRS Definition &lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;12 Overlap Points&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;sans-serif&apos;;&quot;&gt;13-31 Reserved for ASPRS Definition &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="943.759 481.255"
+#!   TOP_LEFT="943.759 481.255"
+#!   BOTTOM_RIGHT="1693.76 431.255"
+#!   BOUNDING_RECT="943.759 481.255 750 50"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="10"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="28"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;RI; ratio index&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;VARI Visible atmospherically resistant index&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="956.464 -229.644"
+#!   TOP_LEFT="956.464 -229.644"
+#!   BOTTOM_RIGHT="1706.46 -279.644"
+#!   BOUNDING_RECT="956.464 -229.644 750 50"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="10"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="61"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Añadimos nuevos componentes:&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#9;ndvi&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#9;height&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1612.1 -827.291"
+#!   TOP_LEFT="-1612.1 -827.291"
+#!   BOTTOM_RIGHT="-1613.1 -826.291"
+#!   BOUNDING_RECT="-1612.1 -827.291 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="56"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="63"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Cálculo de height:&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Convertimos &apos;user_data&apos; (decímetros) &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;en height, pasado a metros&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-955.104 -822.381"
+#!   TOP_LEFT="-955.104 -822.381"
+#!   BOTTOM_RIGHT="-956.104 -821.381"
+#!   BOUNDING_RECT="-955.104 -822.381 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="54"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="41"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Cálculo del NDVI&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-160.601 -888.748"
+#!   TOP_LEFT="-160.601 -888.748"
+#!   BOTTOM_RIGHT="-161.601 -887.748"
+#!   BOUNDING_RECT="-160.601 -888.748 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="55"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="35"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PointCloudConsumer, permite operar con toda&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; la nube de puntos sin romperla&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2329.31 -632.946"
+#!   TOP_LEFT="-2329.31 -632.946"
+#!   BOTTOM_RIGHT="-2330.31 -631.946"
+#!   BOUNDING_RECT="-2329.31 -632.946 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="44"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="43"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fichero MERGE&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Contiene el componente &apos;cat_sio&apos;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2837.05 -835.027"
+#!   TOP_LEFT="-2837.05 -835.027"
+#!   BOTTOM_RIGHT="-2838.05 -834.027"
+#!   BOUNDING_RECT="-2837.05 -835.027 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="99"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="46"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Filtro&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;cat_sio&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="644.196 -833.841"
+#!   TOP_LEFT="644.196 -833.841"
+#!   BOTTOM_RIGHT="643.196 -832.841"
+#!   BOUNDING_RECT="644.196 -833.841 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="45"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="48"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Eliminamos el componente &apos;cat_sio&apos;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="6404.81 -1286.59"
+#!   TOP_LEFT="6404.81 -1286.59"
+#!   BOTTOM_RIGHT="6403.81 -1285.59"
+#!   BOUNDING_RECT="6404.81 -1286.59 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="47"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="133"
+#!   COMMENT_VALUE="&lt;html&gt;&lt;body&gt;PointCloudComponentRemover_2 : Input&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="4329.47 -2797.92"
+#!   TOP_LEFT="4329.47 -2797.92"
+#!   BOTTOM_RIGHT="4328.47 -2796.92"
+#!   BOUNDING_RECT="4329.47 -2797.92 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="122"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="134"
+#!   COMMENT_VALUE="&lt;html&gt;&lt;body&gt;PointCloudFilter_9 : &amp;lt;Unfiltered&amp;gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="6552.61 -2640.29"
+#!   TOP_LEFT="6552.61 -2640.29"
+#!   BOTTOM_RIGHT="6551.61 -2639.29"
+#!   BOUNDING_RECT="6552.61 -2640.29 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="130"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="140"
+#!   COMMENT_VALUE="&lt;html&gt;&lt;body&gt;PointCloudComponentRemover_2 : Input&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2432.34 -3375.79"
+#!   TOP_LEFT="2432.34 -3375.79"
+#!   BOTTOM_RIGHT="2431.34 -3374.79"
+#!   BOUNDING_RECT="2432.34 -3375.79 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="135"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="141"
+#!   COMMENT_VALUE="&lt;html&gt;&lt;body&gt;PointCloudFilter_3 : &amp;lt;Unfiltered&amp;gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="6734.36 -3228.75"
+#!   TOP_LEFT="6734.36 -3228.75"
+#!   BOTTOM_RIGHT="6733.36 -3227.75"
+#!   BOUNDING_RECT="6734.36 -3228.75 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="137"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="149"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Los puntos no clasificados (classification=0), se clasifican la categoría&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Unclassified (classification=1).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1695.62 -1319.46"
+#!   TOP_LEFT="1695.62 -1319.46"
+#!   BOTTOM_RIGHT="2445.62 -1369.46"
+#!   BOUNDING_RECT="1695.62 -1319.46 750 50"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="10"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="152"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Los clasificados como vegetación alta : no se modifican nunca&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="23.3211 -616.9"
+#!   TOP_LEFT="23.3211 -616.9"
+#!   BOTTOM_RIGHT="773.321 -666.9"
+#!   BOUNDING_RECT="23.3211 -616.9 750 50"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="10"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="153"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;CLASIFICACIÓN VEGETACIÓN: BAJA, MEDIA, ALTA&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The American Society for Photogrammetry and Remote Sensing (ASPRS) classifies lidar points into three layers:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    low vegetation (0.5 m &amp;lt;height&amp;lt;= 2.0 m), medium vegetation (2.0 &amp;lt;height&amp;lt;= 5.0 m), high vegetation (5.0 &amp;lt;height)&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    (ASPRS, 2008)&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Clasificación ASPRS:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 0.5 2.0 3 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 2.0 5 4 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 5 100.0 5 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Clasificación IGN:&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 0 0.5 3 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 0.5 3 4 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 3 100.0 5 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Clasificación (Otra clasificación):&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 0.3 1.3 3 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 1.3 3.5 4 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;    argumento += &amp;quot; -classify_between 3.5 100.0 5 &amp;quot;&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2152.14 589.61"
+#!   TOP_LEFT="2152.14 589.61"
+#!   BOTTOM_RIGHT="3743.44 193.981"
+#!   BOUNDING_RECT="2152.14 589.61 1591.3 395.629"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="10"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="123"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No urbanos &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;SIOSE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1090.01 -710.361"
+#!   TOP_LEFT="1090.01 -710.361"
+#!   BOTTOM_RIGHT="1089.01 -709.361"
+#!   BOUNDING_RECT="1090.01 -710.361 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="151"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="156"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Urbano &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;SIOSE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1169.35 -1617.71"
+#!   TOP_LEFT="1169.35 -1617.71"
+#!   BOTTOM_RIGHT="1168.35 -1616.71"
+#!   BOUNDING_RECT="1169.35 -1617.71 -1 -1"
+#!   ORDER="5e+14"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   COLOUR="1,1,0.784314,0.192157"
+#!   SIZE_POLICY="8"
+#!   COMMENT_TYPE="REGULAR"
+#!   ANCHORED_NODE="150"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="44"
+#!   TYPE="PointCloudConsumer"
+#!   VERSION="0"
+#!   POSITION="-2115.57 -1121.67"
+#!   BOUNDING_RECT="-2115.57 -1121.67 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudConsumer"/>
+#!     <XFORM_PARM PARM_NAME="BLOCK_SIZE" PARM_VALUE="10000"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="55"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="-182.137 -1121.67"
+#!   BOUNDING_RECT="-182.137 -1121.67 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="ndvi Auto &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;color_red&lt;closeparen&gt;-&lt;at&gt;Component&lt;openparen&gt;color_green&lt;closeparen&gt;&lt;closeparen&gt;&lt;solidus&gt;&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;color_red&lt;closeparen&gt;+&lt;at&gt;Component&lt;openparen&gt;color_green&lt;closeparen&gt;&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="56"
+#!   TYPE="PointCloudComponentAdder"
+#!   VERSION="0"
+#!   POSITION="-1502.83 -1121.67"
+#!   BOUNDING_RECT="-1502.83 -1121.67 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentAdder"/>
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_ADD" PARM_VALUE="ndvi,Real32,0,height,Real32,0"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="54"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="-861.311 -1121.67"
+#!   BOUNDING_RECT="-861.311 -1121.67 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_2"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="height Auto &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;user_data&lt;closeparen&gt;&lt;solidus&gt;10&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="45"
+#!   TYPE="PointCloudFilter"
+#!   VERSION="1"
+#!   POSITION="532.156 -1091.67"
+#!   BOUNDING_RECT="532.156 -1091.67 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="cat_sio&lt;space&gt;!=&lt;space&gt;3&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;cat_sio&lt;space&gt;!&lt;space&gt;=&lt;space&gt;4"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="cat_sio&lt;space&gt;==&lt;space&gt;3&lt;space&gt;&lt;space&gt;||&lt;space&gt;cat_sio&lt;space&gt;==&lt;space&gt;4&lt;space&gt;||&lt;space&gt;cat_sio&lt;space&gt;==&lt;space&gt;6"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;at&gt;Component&lt;openparen&gt;cat_sio&lt;closeparen&gt;&lt;space&gt;!=3&lt;space&gt;&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;cat_sio&lt;closeparen&gt;&lt;space&gt;!=4&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;cat_sio&lt;closeparen&gt;&lt;space&gt;!=6 ; &lt;at&gt;Component&lt;openparen&gt;cat_sio&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;3&lt;space&gt;&lt;space&gt;||&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;cat_sio&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;4&lt;space&gt;&lt;space&gt;||&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;cat_sio&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST cat_sio&lt;space&gt;!=&lt;space&gt;3&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;cat_sio&lt;space&gt;!&lt;space&gt;=&lt;space&gt;4 ; cat_sio&lt;space&gt;==&lt;space&gt;3&lt;space&gt;&lt;space&gt;||&lt;space&gt;cat_sio&lt;space&gt;==&lt;space&gt;4&lt;space&gt;||&lt;space&gt;cat_sio&lt;space&gt;==&lt;space&gt;6"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="49"
+#!   TYPE="PointCloudFilter"
+#!   VERSION="1"
+#!   POSITION="1630.54 -794.899"
+#!   BOUNDING_RECT="1630.54 -794.899 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;6"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;3"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;4"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;5"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;0"/>
+#!     <FEAT_COLLAPSED COLLAPSED="4"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="5"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.2&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;number_of_returns&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;1 ; &lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.2&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;number_of_returns&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=0&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.5&lt;closeparen&gt; ; &lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.2&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;number_of_returns&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=0.5&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;3&lt;closeparen&gt; ; &lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.2&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;number_of_returns&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=3&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;100&lt;closeparen&gt; ; &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;0.2&lt;closeparen&gt;&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=0&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.5&lt;closeparen&gt; ; &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;0.2&lt;closeparen&gt;&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=0.5&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;3&lt;closeparen&gt; ; &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;0.2&lt;closeparen&gt;&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=3&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;100&lt;closeparen&gt; ; &lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;0 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci&lt;u00f3&gt;n&lt;space&gt;6 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;3 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;4 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;5 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;3 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;4 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;5 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;0"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="66"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5501.26 -385.669"
+#!   BOUNDING_RECT="5501.26 -385.669 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_7"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 6"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="65"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5501.26 -588.2"
+#!   BOUNDING_RECT="5501.26 -588.2 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_8"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="70"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5501.26 -775.85"
+#!   BOUNDING_RECT="5501.26 -775.85 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_9"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="72"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5501.26 -978.385"
+#!   BOUNDING_RECT="5501.26 -978.385 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_10"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 5"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="47"
+#!   TYPE="PointCloudComponentRemover"
+#!   VERSION="0"
+#!   POSITION="6472.56 -1415.34"
+#!   BOUNDING_RECT="6472.56 -1415.34 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_REMOVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_REMOVE" PARM_VALUE="cat_sio,height,ndvi"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentRemover_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="77"
+#!   TYPE="PointCloudCombiner"
+#!   VERSION="3"
+#!   POSITION="7203.51 -1423.63"
+#!   BOUNDING_RECT="7203.51 -1423.63 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Get Attributes From One Representative Feature"/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="80"
+#!   TYPE="PointCloudFilter"
+#!   VERSION="1"
+#!   POSITION="1635.2 -1618.72"
+#!   BOUNDING_RECT="1635.2 -1618.72 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;6"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;0"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;6&lt;closeparen&gt; ; &lt;at&gt;Component&lt;openparen&gt;classification&lt;closeparen&gt;&lt;space&gt;==&lt;space&gt;0 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci&lt;u00f3&gt;n&lt;space&gt;6 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;0"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="84"
+#!   TYPE="PointCloudFilter"
+#!   VERSION="1"
+#!   POSITION="2421.17 -1755.38"
+#!   BOUNDING_RECT="2421.17 -1755.38 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="ndvi&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.2"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="ndvi&lt;space&gt;&lt;gt&gt;=&lt;space&gt;0.2"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.2 ; &lt;at&gt;Component&lt;openparen&gt;ndvi&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=&lt;space&gt;0.2 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST ndvi&lt;space&gt;&lt;lt&gt;&lt;space&gt;0.2 ; ndvi&lt;space&gt;&lt;gt&gt;=&lt;space&gt;0.2"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter_5"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="89"
+#!   TYPE="PointCloudFilter"
+#!   VERSION="1"
+#!   POSITION="3149.85 -1538.5"
+#!   BOUNDING_RECT="3149.85 -1538.5 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;6"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;number_of_returns&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;3&lt;closeparen&gt; FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci&lt;u00f3&gt;n&lt;space&gt;6"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter_7"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="107"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5460.14 -1677.8"
+#!   BOUNDING_RECT="5460.14 -1677.8 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_11"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 6"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="111"
+#!   TYPE="PointCloudFilter"
+#!   VERSION="1"
+#!   POSITION="4044.8 -1873.33"
+#!   BOUNDING_RECT="4044.8 -1873.33 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;3"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;4"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="clasificaci&lt;u00f3&gt;n&lt;space&gt;5"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=0&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;0.5&lt;closeparen&gt; ; &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=0.5&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;3&lt;closeparen&gt; ; &lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;=3&lt;space&gt;&lt;amp&gt;&lt;amp&gt;&lt;space&gt;&lt;at&gt;Component&lt;openparen&gt;height&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;100&lt;closeparen&gt; FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci&lt;u00f3&gt;n&lt;space&gt;3 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;4 ; clasificaci&lt;u00f3&gt;n&lt;space&gt;5"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter_9"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="113"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5460.14 -1936.57"
+#!   BOUNDING_RECT="5460.14 -1936.57 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_12"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="114"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5460.14 -2183.76"
+#!   BOUNDING_RECT="5460.14 -2183.76 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_13"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="115"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5460.14 -2386.29"
+#!   BOUNDING_RECT="5460.14 -2386.29 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_14"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 5"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="122"
+#!   TYPE="Junction"
+#!   VERSION="0"
+#!   POSITION="5000.79 -2677.41"
+#!   BOUNDING_RECT="5000.79 -2677.41 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter_9__UNFILTERED_"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="130"
+#!   TYPE="Junction"
+#!   VERSION="0"
+#!   POSITION="6379.44 -2664.87"
+#!   BOUNDING_RECT="6379.44 -2664.87 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentRemover_4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="135"
+#!   TYPE="Junction"
+#!   VERSION="0"
+#!   POSITION="2947.65 -3244.13"
+#!   BOUNDING_RECT="2947.65 -3244.13 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter_3__UNFILTERED_"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="137"
+#!   TYPE="Junction"
+#!   VERSION="0"
+#!   POSITION="6523.99 -3245.89"
+#!   BOUNDING_RECT="6523.99 -3245.89 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudComponentRemover_5"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="143"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="5489.79 -1208.03"
+#!   BOUNDING_RECT="5489.79 -1208.03 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_15"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 1"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="146"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="2"
+#!   POSITION="2955.05 -2744.12"
+#!   BOUNDING_RECT="2955.05 -2744.12 -1 -1"
+#!   ORDER="5e+14"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="16492"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudExpressionEvaluator_16"/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="classification Auto 1"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="52"
+#!   SOURCE_NODE="99"
+#!   TARGET_NODE="44"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="57"
+#!   SOURCE_NODE="44"
+#!   TARGET_NODE="56"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="151"
+#!   SOURCE_NODE="45"
+#!   TARGET_NODE="49"
+#!   SOURCE_PORT_DESC="fo 0 cat_sio&lt;lt&gt;space&lt;gt&gt;!=&lt;lt&gt;space&lt;gt&gt;3&lt;lt&gt;space&lt;gt&gt;&lt;lt&gt;amp&lt;gt&gt;&lt;lt&gt;amp&lt;gt&gt;&lt;lt&gt;space&lt;gt&gt;cat_sio&lt;lt&gt;space&lt;gt&gt;!&lt;lt&gt;space&lt;gt&gt;=&lt;lt&gt;space&lt;gt&gt;4"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="79"
+#!   SOURCE_NODE="47"
+#!   TARGET_NODE="77"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="67"
+#!   SOURCE_NODE="49"
+#!   TARGET_NODE="66"
+#!   SOURCE_PORT_DESC="fo 0 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;6"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="36"
+#!   SOURCE_NODE="54"
+#!   TARGET_NODE="55"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="50"
+#!   SOURCE_NODE="55"
+#!   TARGET_NODE="45"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="60"
+#!   SOURCE_NODE="56"
+#!   TARGET_NODE="54"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="53"
+#!   SOURCE_NODE="65"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="51"
+#!   SOURCE_NODE="66"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="74"
+#!   SOURCE_NODE="70"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="75"
+#!   SOURCE_NODE="72"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="68"
+#!   SOURCE_NODE="77"
+#!   TARGET_NODE="78"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="85"
+#!   SOURCE_NODE="80"
+#!   TARGET_NODE="84"
+#!   SOURCE_PORT_DESC="fo 0 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;6"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="106"
+#!   SOURCE_NODE="84"
+#!   TARGET_NODE="89"
+#!   SOURCE_PORT_DESC="fo 0 ndvi&lt;lt&gt;space&lt;gt&gt;&lt;lt&gt;lt&lt;gt&gt;&lt;lt&gt;space&lt;gt&gt;0.2"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="108"
+#!   SOURCE_NODE="89"
+#!   TARGET_NODE="107"
+#!   SOURCE_PORT_DESC="fo 0 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;6"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="109"
+#!   SOURCE_NODE="107"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="116"
+#!   SOURCE_NODE="111"
+#!   TARGET_NODE="113"
+#!   SOURCE_PORT_DESC="fo 0 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;3"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="119"
+#!   SOURCE_NODE="113"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="120"
+#!   SOURCE_NODE="114"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="121"
+#!   SOURCE_NODE="115"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="132"
+#!   SOURCE_NODE="122"
+#!   TARGET_NODE="130"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="true"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="131"
+#!   SOURCE_NODE="130"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="139"
+#!   SOURCE_NODE="135"
+#!   TARGET_NODE="137"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="true"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="138"
+#!   SOURCE_NODE="137"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="145"
+#!   SOURCE_NODE="143"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="148"
+#!   SOURCE_NODE="146"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS="5904 -2804"
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="150"
+#!   SOURCE_NODE="45"
+#!   TARGET_NODE="80"
+#!   SOURCE_PORT_DESC="fo 1 cat_sio&lt;lt&gt;space&lt;gt&gt;==&lt;lt&gt;space&lt;gt&gt;3&lt;lt&gt;space&lt;gt&gt;&lt;lt&gt;space&lt;gt&gt;||&lt;lt&gt;space&lt;gt&gt;cat_sio&lt;lt&gt;space&lt;gt&gt;==&lt;lt&gt;space&lt;gt&gt;4&lt;lt&gt;space&lt;gt&gt;||&lt;lt&gt;space&lt;gt&gt;cat_sio&lt;lt&gt;space&lt;gt&gt;==&lt;lt&gt;space&lt;gt&gt;6"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="69"
+#!   SOURCE_NODE="49"
+#!   TARGET_NODE="65"
+#!   SOURCE_PORT_DESC="fo 1 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;3"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="147"
+#!   SOURCE_NODE="80"
+#!   TARGET_NODE="146"
+#!   SOURCE_PORT_DESC="fo 1 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="112"
+#!   SOURCE_NODE="84"
+#!   TARGET_NODE="111"
+#!   SOURCE_PORT_DESC="fo 1 ndvi&lt;lt&gt;space&lt;gt&gt;&lt;lt&gt;gt&lt;gt&gt;=&lt;lt&gt;space&lt;gt&gt;0.2"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="110"
+#!   SOURCE_NODE="89"
+#!   TARGET_NODE="111"
+#!   SOURCE_PORT_DESC="fo 1 &lt;lt&gt;UNFILTERED&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="117"
+#!   SOURCE_NODE="111"
+#!   TARGET_NODE="114"
+#!   SOURCE_PORT_DESC="fo 1 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;4"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="71"
+#!   SOURCE_NODE="49"
+#!   TARGET_NODE="70"
+#!   SOURCE_PORT_DESC="fo 2 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;4"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="136"
+#!   SOURCE_NODE="80"
+#!   TARGET_NODE="135"
+#!   SOURCE_PORT_DESC="fo 2 &lt;lt&gt;UNFILTERED&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="118"
+#!   SOURCE_NODE="111"
+#!   TARGET_NODE="115"
+#!   SOURCE_PORT_DESC="fo 2 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;5"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="73"
+#!   SOURCE_NODE="49"
+#!   TARGET_NODE="72"
+#!   SOURCE_PORT_DESC="fo 3 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;5"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="129"
+#!   SOURCE_NODE="111"
+#!   TARGET_NODE="122"
+#!   SOURCE_PORT_DESC="fo 3 &lt;lt&gt;UNFILTERED&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="144"
+#!   SOURCE_NODE="49"
+#!   TARGET_NODE="143"
+#!   SOURCE_PORT_DESC="fo 4 clasificaci&lt;lt&gt;u00f3&lt;gt&gt;n&lt;lt&gt;space&lt;gt&gt;0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="76"
+#!   SOURCE_NODE="49"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="fo 5 &lt;lt&gt;UNFILTERED&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+FME_PYTHON_VERSION 27
+GUI IGNORE SourceDataset_LAS_1,LAS_IN_EXPOSE_ATTRS_GROUP_LAS_1,LAS_IN_SEARCH_ENVELOPE_MINX_LAS_1,LAS_IN_SEARCH_ENVELOPE_MINY_LAS_1,LAS_IN_SEARCH_ENVELOPE_MAXX_LAS_1,LAS_IN_SEARCH_ENVELOPE_MAXY_LAS_1,LAS_IN_CLIP_TO_ENVELOPE_LAS_1,LAS_IN_NETWORK_AUTHENTICATION_LAS_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_LAS_1,DestDataset_LAS_2,LAS_OUT_VERSION_LAS_2,LAS_OUT_COMPRESSION_LAS_2,LAS_OUT_FIXED_GROUP_LAS_2,LAS_OUT_USER_GROUP_LAS_2,LAS_OUT_USER_COMPONENTS_LAS_2,_ARCGIS_LAS_DATASET_LAS_2,_COMPUTE_STATISTICS_ON_ARCGIS_LAS_DATASET_LAS_2,_ZLAS_REARRANGE_POINTS_LAS_2,_ZLAS_POINT_SPACING_SOURCE_LAS_2,_ZLAS_POINT_SPACING_VALUE_LAS_2
+DEFAULT_MACRO DestDataset_LAS C:\Trabajo_Ana\proceso_las_rioja\salida_classify_ndvi_1x1
+GUI DIRNAME DestDataset_LAS Destination ASPRS LAS Folder:
+DEFAULT_MACRO SourceDataset_LAS C:\Trabajo_Ana\proceso_las_rioja\salida_classify_merge\597000_4676000_merge.laz
+GUI MULTIFILE SourceDataset_LAS LAS_Files(*.las;*.laz;*.zlas;*.lasd)|*.las;*.laz;*.zlas;*.lasd|LAS_Files(*.las)|*.las|Compressed_LAS_Files(*.laz)|*.laz|Esri_Optimized_LAS_Files(*.zlas)|*.zlas|Esri_LAS_Dataset_Files(*.lasd)|*.lasd|All_files(*)|* Source ASPRS LAS File(s):
+INCLUDE [ if {{$(DestDataset_LAS)} == {}} { puts_real {Parameter 'DestDataset_LAS' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_LAS)} == {}} { puts_real {Parameter 'SourceDataset_LAS' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE LAS
+READER_KEYWORD LAS_1
+READER_GEN_DIRECTIVES EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,LAS_EXPOSE_FORMAT_ATTRS,,SEARCH_ENVELOPE_MINY,0,CLIP_TO_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,GROUP_BY_DATASET,No,SEARCH_ENVELOPE_MAXY,0,_MERGE_SCHEMAS,YES,SEARCH_ENVELOPE_MAXX,0,USE_SEARCH_ENVELOPE,NO
+
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} LAS
+MULTI_WRITER_KEYWORD{0} LAS_2
+#! END_WB_HEADER
+
+#! START_WB_HEADER
+MACRO WB_KEYWORD "LAS_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER LAS LAS_1
+# =======================================================================
+# The following GUI line prompts for a file to be used as the source LAS file.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_LAS_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER LAS LAS_1
+DEFAULT_MACRO SourceDataset_LAS_1 $(SourceDataset_LAS)
+GUI MULTIFILE SourceDataset_LAS_1 LAS_Files(*.las;*.laz;*.zlas;*.lasd)|*.las;*.laz;*.zlas;*.lasd|LAS_Files(*.las)|*.las|Compressed_LAS_Files(*.laz)|*.laz|Esri_Optimized_LAS_Files(*.zlas)|*.zlas|Esri_LAS_Dataset_Files(*.lasd)|*.lasd|All_files(*)|* Source ASPRS LAS File(s):
+LAS_1_READER_META_ATTRIBUTES fme_dataset
+DEFAULT_MACRO LAS_IN_GROUP_BY_DATASET_LAS_1 No
+LAS_1_GROUP_BY_DATASET "$(LAS_IN_GROUP_BY_DATASET_LAS_1)"
+DEFAULT_MACRO LAS_IN_EXPOSE_ATTRS_GROUP_LAS_1 FME_DISCLOSURE_OPEN
+LAS_1_EXPOSE_ATTRS_GROUP "$(LAS_IN_EXPOSE_ATTRS_GROUP_LAS_1)"
+GUI DISCLOSUREGROUP LAS_IN_EXPOSE_ATTRS_GROUP_LAS_1 LAS_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO LAS_IN_SEARCH_ENVELOPE_MINX_LAS_1 0
+LAS_1_SEARCH_ENVELOPE "$(LAS_IN_SEARCH_ENVELOPE_MINX_LAS_1)"
+GUI OPTIONAL FLOAT LAS_IN_SEARCH_ENVELOPE_MINX_LAS_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO LAS_IN_SEARCH_ENVELOPE_MINY_LAS_1 0
+LAS_1_SEARCH_ENVELOPE "$(LAS_IN_SEARCH_ENVELOPE_MINY_LAS_1)"
+GUI OPTIONAL FLOAT LAS_IN_SEARCH_ENVELOPE_MINY_LAS_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO LAS_IN_SEARCH_ENVELOPE_MAXX_LAS_1 0
+LAS_1_SEARCH_ENVELOPE "$(LAS_IN_SEARCH_ENVELOPE_MAXX_LAS_1)"
+GUI OPTIONAL FLOAT LAS_IN_SEARCH_ENVELOPE_MAXX_LAS_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO LAS_IN_SEARCH_ENVELOPE_MAXY_LAS_1 0
+LAS_1_SEARCH_ENVELOPE "$(LAS_IN_SEARCH_ENVELOPE_MAXY_LAS_1)"
+GUI OPTIONAL FLOAT LAS_IN_SEARCH_ENVELOPE_MAXY_LAS_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO LAS_IN_CLIP_TO_ENVELOPE_LAS_1 NO
+LAS_1_CLIP_TO_ENVELOPE "$(LAS_IN_CLIP_TO_ENVELOPE_LAS_1)"
+GUI OPTIONAL CHECKBOX LAS_IN_CLIP_TO_ENVELOPE_LAS_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO LAS_IN_NETWORK_AUTHENTICATION_LAS_1 
+LAS_1_NETWORK_AUTHENTICATION "$(LAS_IN_NETWORK_AUTHENTICATION_LAS_1)"
+GUI OPTIONAL AUTHENTICATOR LAS_IN_NETWORK_AUTHENTICATION_LAS_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO LAS_IN_ATTRIBUTE_READING_LAS_1 ALL
+LAS_1_ATTRIBUTE_READING "$(LAS_IN_ATTRIBUTE_READING_LAS_1)"
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_LAS_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_LAS_1 Search Envelope Coordinate System:
+LAS_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_LAS_1)"
+# ===========================================================================
+LAS_1_DATASET "$(SourceDataset_LAS_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "LAS_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER LAS LAS_2
+# The following GUI lines prompt for a LAS file to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_LAS_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER LAS LAS_2
+DEFAULT_MACRO DestDataset_LAS_2 $(DestDataset_LAS)
+GUI DIRNAME DestDataset_LAS_2 Destination ASPRS LAS Folder:
+# ============================================================================
+# Version
+DEFAULT_MACRO LAS_OUT_VERSION_LAS_2 1.2
+LAS_2_VERSION "$(LAS_OUT_VERSION_LAS_2)"
+GUI LOOKUP_CHOICE LAS_OUT_VERSION_LAS_2 1.0,1.0%1.1,1.1%1.2,1.2%1.3,1.3%"1.4 (Legacy Compatible)",1.4-legacy-compatible%1.4,1.4 ASPRS LAS Version:
+# [PR#30472] Compression
+DEFAULT_MACRO LAS_OUT_COMPRESSION_LAS_2 LAZ
+LAS_2_COMPRESSION "$(LAS_OUT_COMPRESSION_LAS_2)"
+GUI CHOICE LAS_OUT_COMPRESSION_LAS_2 None%LAZ%zLAS Compression:
+GUI DISCLOSUREGROUP LAS_OUT_FIXED_GROUP_LAS_2 FME_DISCLOSURE_CLOSED%FIXED_COMPONENTS Fixed Components
+# This is a placeholder parameter that will be replaced with a custom table in the controller
+GUI DISCLOSUREGROUP LAS_OUT_USER_GROUP_LAS_2 FME_DISCLOSURE_OPEN%USER_COMPONENTS Additional User Components
+DEFAULT_MACRO LAS_OUT_USER_COMPONENTS_LAS_2 
+LAS_2_USER_COMPONENTS "$(LAS_OUT_USER_COMPONENTS_LAS_2)"
+GUI OPTIONAL GUI_LINE_TABLE_ENCODED LAS_OUT_USER_COMPONENTS_LAS_2 NO_LABEL%ROW_DELIM:,%COL_DELIM:,%"User Components"%"STRING COMPONENTS" User Components
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO LAS_OUT_DESTINATION_DATASETTYPE_VALIDATION_LAS_2 Yes
+LAS_2_DESTINATION_DATASETTYPE_VALIDATION "$(LAS_OUT_DESTINATION_DATASETTYPE_VALIDATION_LAS_2)"
+DEFAULT_MACRO LAS_OUT_COORDINATE_SYSTEM_GRANULARITY_LAS_2 FEATURE
+LAS_2_COORDINATE_SYSTEM_GRANULARITY "$(LAS_OUT_COORDINATE_SYSTEM_GRANULARITY_LAS_2)"
+# The following GUI line provides the ability to create an
+# Esri ArcGIS LAS Dataset encapsulating the LAS files produced
+# by this translation. The LAS Dataset can then be used to view
+# the output using Esri's tools.
+DEFAULT_MACRO _ARCGIS_LAS_DATASET_LAS_2 
+GUI OPTIONAL TEXT _ARCGIS_LAS_DATASET_LAS_2 ArcGIS LAS Dataset (.lasd) Filename:
+LAS_2_ARCGIS_LAS_DATASET "$(_ARCGIS_LAS_DATASET_LAS_2)"
+# The following GUI line determines whether statistics should
+# be calculated on the ArcGIS LAS Dataset. This keyword is
+# applicable when FME is creating an ArcGIS LAS Dataset.
+DEFAULT_MACRO _COMPUTE_STATISTICS_ON_ARCGIS_LAS_DATASET_LAS_2 No
+GUI CHOICE _COMPUTE_STATISTICS_ON_ARCGIS_LAS_DATASET_LAS_2 Yes%No Compute Statistics on ArcGIS LAS Dataset:
+LAS_2_COMPUTE_STATISTICS_ON_ARCGIS_LAS_DATASET $(_COMPUTE_STATISTICS_ON_ARCGIS_LAS_DATASET_LAS_2)
+DEFAULT_MACRO _ZLAS_REARRANGE_POINTS_LAS_2 Yes
+GUI CHOICE _ZLAS_REARRANGE_POINTS_LAS_2 Yes%No Rearrange Points for zLAS Compression:
+LAS_2_ZLAS_REARRANGE_POINTS $(_ZLAS_REARRANGE_POINTS_LAS_2)
+GUI LOOKUP_CHOICE _ZLAS_POINT_SPACING_SOURCE_LAS_2 "Scan Points",scan%"From Header",header%"Specify Value",specify zLAS Point Spacing Source:
+DEFAULT_MACRO _ZLAS_POINT_SPACING_SOURCE_LAS_2 scan
+LAS_2_ZLAS_POINT_SPACING_SOURCE $(_ZLAS_POINT_SPACING_SOURCE_LAS_2)
+DEFAULT_MACRO _ZLAS_POINT_SPACING_VALUE_LAS_2 1.0
+GUI FLOAT _ZLAS_POINT_SPACING_VALUE_LAS_2 zLAS Point Spacing Value:
+LAS_2_ZLAS_POINT_SPACING_VALUE $(_ZLAS_POINT_SPACING_VALUE_LAS_2)
+LAS_2_DATASET "$(DestDataset_LAS_2)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)lidar_ndvi_point_cloud_fme.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_LAS_1 LAS_1
+DEFAULT_MACRO DATASET_KEYWORD_LAS_2 LAS_2
+# -------------------------------------------------------------------------
+
+LAS_1_READER_META_ATTRIBUTES fme_basename fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME lidar_ndvi_point_cloud_fme
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+LAS_1_DEF LAS
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD LAS_1   INPUT FEATURE_TYPE *    ROUTE LAS LAS_1::LAS TO FME_GENERIC ::LAS ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+LAS_1_MERGE_DEF LAS_1::LAS EXACT LAS
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "LAS (LAS_1) Splitter"    INPUT FEATURE_TYPE LAS    OUTPUT FEATURE_TYPE LAS_LAS_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudConsumer    INPUT  FEATURE_TYPE LAS_LAS_1    OUTPUT FEATURE_TYPE PointCloudConsumer_OUTPUT      @ConsumePointCloud(10000)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudComponentAdder    INPUT  FEATURE_TYPE PointCloudConsumer_OUTPUT    OUTPUT FEATURE_TYPE PointCloudComponentAdder_OUTPUT       @AddPointCloudComponents(ndvi,Real32,0,height,Real32,0)
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_2_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_2_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_2_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {height Auto @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>user_data<closeparen><solidus>10<closeparen>,PointCloudExpressionEvaluator_2)}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_2_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_2    INPUT  FEATURE_TYPE PointCloudComponentAdder_OUTPUT    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_2_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_2_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_2_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_2_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {ndvi Auto @EvaluateExpression(FDIV,STRING_ENCODED,<openparen><at>Component<openparen>color_red<closeparen>-<at>Component<openparen>color_green<closeparen><closeparen><solidus><openparen><at>Component<openparen>color_red<closeparen>+<at>Component<openparen>color_green<closeparen><closeparen>,PointCloudExpressionEvaluator)}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_2_RESULT    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudFilter    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_RESULT    MODE FILTER    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <at>Component<openparen>cat_sio<closeparen><space>!=3<space><space><amp><amp><space><at>Component<openparen>cat_sio<closeparen><space>!=4<space><amp><amp><space><at>Component<openparen>cat_sio<closeparen><space>!=6 ; <at>Component<openparen>cat_sio<closeparen><space>==<space>3<space><space>||<space><at>Component<openparen>cat_sio<closeparen><space>==<space>4<space><space>||<space><at>Component<openparen>cat_sio<closeparen><space>==<space>6 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST cat_sio<space>!=<space>3<space><amp><amp><space>cat_sio<space>!<space>=<space>4 ; cat_sio<space>==<space>3<space><space>||<space>cat_sio<space>==<space>4<space>||<space>cat_sio<space>==<space>6    OUTPUT_UNFILTERED_POINTS "No"    OUTPUT RESULT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_TestFactory_0 INPUT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = cat_sio<space>!=<space>3<space><amp><amp><space>cat_sio<space>!<space>=<space>4 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_cat_sio<space>!=<space>3<space><amp><amp><space>cat_sio<space>!<space>=<space>4    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_TestFactory_1 INPUT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = cat_sio<space>==<space>3<space><space>||<space>cat_sio<space>==<space>4<space>||<space>cat_sio<space>==<space>6 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_cat_sio<space>==<space>3<space><space>||<space>cat_sio<space>==<space>4<space>||<space>cat_sio<space>==<space>6    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_2
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudFilter_3    INPUT  FEATURE_TYPE PointCloudFilter_cat_sio<space>==<space>3<space><space>||<space>cat_sio<space>==<space>4<space>||<space>cat_sio<space>==<space>6    MODE FILTER    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <openparen><at>Component<openparen>classification<closeparen><space>==<space>6<closeparen> ; <at>Component<openparen>classification<closeparen><space>==<space>0 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci<u00f3>n<space>6 ; clasificaci<u00f3>n<space>0    OUTPUT_UNFILTERED_POINTS "Yes"    OUTPUT RESULT FEATURE_TYPE PointCloudFilter_3_POINTCLOUDFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_3_TestFactory_0 INPUT FEATURE_TYPE PointCloudFilter_3_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>6 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_3_clasificaci<u00f3>n<space>6    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_3_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_3_TestFactory_1 INPUT FEATURE_TYPE PointCloudFilter_3_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>0 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_3_clasificaci<u00f3>n<space>0    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_3_POINTCLOUDFILTERINPUTLINE_2
+FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudFilter_3_UNFILTERED INPUT FEATURE_TYPE PointCloudFilter_3_POINTCLOUDFILTERINPUTLINE_2 OUTPUT FEATURE_TYPE PointCloudFilter_3_<UNFILTERED>    @RemoveAttributes(__pc_internal_filter_attribute__)
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudFilter_3__UNFILTERED_    INPUT  FEATURE_TYPE PointCloudFilter_3_<UNFILTERED>    OUTPUT FEATURE_TYPE PointCloudFilter_3__UNFILTERED__Output
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudComponentRemover_5    INPUT  FEATURE_TYPE PointCloudFilter_3__UNFILTERED__Output    OUTPUT FEATURE_TYPE PointCloudComponentRemover_5_Output
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_16_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_16_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_16_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 1}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_16_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_16    INPUT  FEATURE_TYPE PointCloudFilter_3_clasificaci<u00f3>n<space>0    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_16_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_16_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_16_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_16_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudFilter_5    INPUT  FEATURE_TYPE PointCloudFilter_3_clasificaci<u00f3>n<space>6    MODE FILTER    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <at>Component<openparen>ndvi<closeparen><space><lt><space>0.2 ; <at>Component<openparen>ndvi<closeparen><space><gt>=<space>0.2 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST ndvi<space><lt><space>0.2 ; ndvi<space><gt>=<space>0.2    OUTPUT_UNFILTERED_POINTS "No"    OUTPUT RESULT FEATURE_TYPE PointCloudFilter_5_POINTCLOUDFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_5_TestFactory_0 INPUT FEATURE_TYPE PointCloudFilter_5_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = ndvi<space><lt><space>0.2 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_5_ndvi<space><lt><space>0.2    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_5_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_5_TestFactory_1 INPUT FEATURE_TYPE PointCloudFilter_5_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = ndvi<space><gt>=<space>0.2 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_5_ndvi<space><gt>=<space>0.2    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_5_POINTCLOUDFILTERINPUTLINE_2
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudFilter_7    INPUT  FEATURE_TYPE PointCloudFilter_5_ndvi<space><lt><space>0.2    MODE FILTER    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <openparen><at>Component<openparen>number_of_returns<closeparen><space><lt><space>3<closeparen> FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci<u00f3>n<space>6    OUTPUT_UNFILTERED_POINTS "Yes"    OUTPUT RESULT FEATURE_TYPE PointCloudFilter_7_POINTCLOUDFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_7_TestFactory_0 INPUT FEATURE_TYPE PointCloudFilter_7_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>6 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_7_clasificaci<u00f3>n<space>6    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_7_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudFilter_7_UNFILTERED INPUT FEATURE_TYPE PointCloudFilter_7_POINTCLOUDFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE PointCloudFilter_7_<UNFILTERED>    @RemoveAttributes(__pc_internal_filter_attribute__)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudFilter_9    INPUT  FEATURE_TYPE PointCloudFilter_5_ndvi<space><gt>=<space>0.2    INPUT  FEATURE_TYPE PointCloudFilter_7_<UNFILTERED>    MODE FILTER    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <openparen><at>Component<openparen>height<closeparen><space><gt>=0<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt>0.5<closeparen> ; <openparen><at>Component<openparen>height<closeparen><space><gt>=0.5<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt><space>3<closeparen> ; <openparen><at>Component<openparen>height<closeparen><space><gt>=3<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt><space>100<closeparen> FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci<u00f3>n<space>3 ; clasificaci<u00f3>n<space>4 ; clasificaci<u00f3>n<space>5    OUTPUT_UNFILTERED_POINTS "Yes"    OUTPUT RESULT FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_9_TestFactory_0 INPUT FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>3 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_9_clasificaci<u00f3>n<space>3    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_9_TestFactory_1 INPUT FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>4 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_9_clasificaci<u00f3>n<space>4    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_2
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_9_TestFactory_2 INPUT FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_2 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>5 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_9_clasificaci<u00f3>n<space>5    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_3
+FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudFilter_9_UNFILTERED INPUT FEATURE_TYPE PointCloudFilter_9_POINTCLOUDFILTERINPUTLINE_3 OUTPUT FEATURE_TYPE PointCloudFilter_9_<UNFILTERED>    @RemoveAttributes(__pc_internal_filter_attribute__)
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudFilter_9__UNFILTERED_    INPUT  FEATURE_TYPE PointCloudFilter_9_<UNFILTERED>    OUTPUT FEATURE_TYPE PointCloudFilter_9__UNFILTERED__Output
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudComponentRemover_4    INPUT  FEATURE_TYPE PointCloudFilter_9__UNFILTERED__Output    OUTPUT FEATURE_TYPE PointCloudComponentRemover_4_Output
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_14_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_14_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_14_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 5}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_14_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_14    INPUT  FEATURE_TYPE PointCloudFilter_9_clasificaci<u00f3>n<space>5    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_14_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_14_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_14_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_14_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_13_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_13_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_13_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 4}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_13_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_13    INPUT  FEATURE_TYPE PointCloudFilter_9_clasificaci<u00f3>n<space>4    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_13_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_13_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_13_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_13_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_12_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_12_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_12_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 3}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_12_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_12    INPUT  FEATURE_TYPE PointCloudFilter_9_clasificaci<u00f3>n<space>3    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_12_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_12_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_12_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_12_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_11_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_11_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_11_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 6}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_11_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_11    INPUT  FEATURE_TYPE PointCloudFilter_7_clasificaci<u00f3>n<space>6    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_11_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_11_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_11_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_11_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudFilter_2    INPUT  FEATURE_TYPE PointCloudFilter_cat_sio<space>!=<space>3<space><amp><amp><space>cat_sio<space>!<space>=<space>4    MODE FILTER    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <at>Component<openparen>classification<closeparen><space>==<space>6<space><amp><amp><space><at>Component<openparen>ndvi<closeparen><space><lt><space>0.2<space><amp><amp><space><at>Component<openparen>number_of_returns<closeparen><space>==<space>1 ; <at>Component<openparen>classification<closeparen><space>==<space>6<space><amp><amp><space><at>Component<openparen>ndvi<closeparen><space><lt><space>0.2<space><amp><amp><space><at>Component<openparen>number_of_returns<closeparen><space><gt><space>1<space><amp><amp><space><openparen><at>Component<openparen>height<closeparen><space><gt>=0<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt><space>0.5<closeparen> ; <at>Component<openparen>classification<closeparen><space>==<space>6<space><amp><amp><space><at>Component<openparen>ndvi<closeparen><space><lt><space>0.2<space><amp><amp><space><at>Component<openparen>number_of_returns<closeparen><space><gt><space>1<space><amp><amp><space><openparen><at>Component<openparen>height<closeparen><space><gt>=0.5<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt><space>3<closeparen> ; <at>Component<openparen>classification<closeparen><space>==<space>6<space><amp><amp><space><at>Component<openparen>ndvi<closeparen><space><lt><space>0.2<space><amp><amp><space><at>Component<openparen>number_of_returns<closeparen><space><gt><space>1<space><amp><amp><space><openparen><at>Component<openparen>height<closeparen><space><gt>=3<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt><space>100<closeparen> ; <openparen><at>Component<openparen>classification<closeparen><space>==<space>6<space><amp><amp><space><at>Component<openparen>ndvi<closeparen><space><gt><space>0.2<closeparen><space><amp><amp><space><openparen><at>Component<openparen>height<closeparen><space><gt>=0<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt><space>0.5<closeparen> ; <openparen><at>Component<openparen>classification<closeparen><space>==<space>6<space><amp><amp><space><at>Component<openparen>ndvi<closeparen><space><gt><space>0.2<closeparen><space><amp><amp><space><openparen><at>Component<openparen>height<closeparen><space><gt>=0.5<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt>3<closeparen> ; <openparen><at>Component<openparen>classification<closeparen><space>==<space>6<space><amp><amp><space><at>Component<openparen>ndvi<closeparen><space><gt><space>0.2<closeparen><space><amp><amp><space><openparen><at>Component<openparen>height<closeparen><space><gt>=3<space><amp><amp><space><at>Component<openparen>height<closeparen><space><lt><space>100<closeparen> ; <at>Component<openparen>classification<closeparen><space>==<space>0 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST clasificaci<u00f3>n<space>6 ; clasificaci<u00f3>n<space>3 ; clasificaci<u00f3>n<space>4 ; clasificaci<u00f3>n<space>5 ; clasificaci<u00f3>n<space>3 ; clasificaci<u00f3>n<space>4 ; clasificaci<u00f3>n<space>5 ; clasificaci<u00f3>n<space>0    OUTPUT_UNFILTERED_POINTS "Yes"    OUTPUT RESULT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_0 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>6 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>6    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_1 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>3 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>3    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_2
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_2 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_2 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>4 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>4    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_3
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_3 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_3 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>5 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>5    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_4
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_4 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_4 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>3 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>3    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_5
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_5 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_5 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>4 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>4    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_6
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_6 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_6 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>5 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>5    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_7
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_2_TestFactory_7 INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_7 STRING_TEST @Value(__pc_internal_filter_attribute__) = clasificaci<u00f3>n<space>0 OUTPUT PASSED FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>0    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_8
+FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudFilter_2_UNFILTERED INPUT FEATURE_TYPE PointCloudFilter_2_POINTCLOUDFILTERINPUTLINE_8 OUTPUT FEATURE_TYPE PointCloudFilter_2_<UNFILTERED>    @RemoveAttributes(__pc_internal_filter_attribute__)
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_15_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_15_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_15_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 1}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_15_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_15    INPUT  FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>0    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_15_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_15_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_15_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_15_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_10_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_10_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_10_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 5}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_10_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_10    INPUT  FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>5    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_10_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_10_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_10_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_10_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_9_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_9_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_9_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 4}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_9_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_9    INPUT  FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>4    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_9_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_9_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_9_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_9_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_8_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_8_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_8_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 3}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_8_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_8    INPUT  FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>3    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_8_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_8_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_8_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_8_RESULT
+
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO PointCloudExpressionEvaluator_7_COMPONENT_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_7_COMPONENT_TYPE_LIST
+DEFAULT_MACRO PointCloudExpressionEvaluator_7_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {classification Auto 6}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudExpressionEvaluator_7_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudExpressionEvaluator_7    INPUT  FEATURE_TYPE PointCloudFilter_2_clasificaci<u00f3>n<space>6    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(PointCloudExpressionEvaluator_7_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(PointCloudExpressionEvaluator_7_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(PointCloudExpressionEvaluator_7_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    OUTPUT RESULT FEATURE_TYPE PointCloudExpressionEvaluator_7_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudComponentRemover_2    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_8_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_7_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_9_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_10_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_11_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_12_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_13_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_14_RESULT    INPUT  FEATURE_TYPE PointCloudComponentRemover_4_Output    INPUT  FEATURE_TYPE PointCloudComponentRemover_5_Output    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_15_RESULT    INPUT  FEATURE_TYPE PointCloudExpressionEvaluator_16_RESULT    INPUT  FEATURE_TYPE PointCloudFilter_2_<UNFILTERED>    OUTPUT FEATURE_TYPE PointCloudComponentRemover_2_OUTPUT       @RemovePointCloudComponents(REMOVE,cat_sio,height,ndvi)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE PointCloudComponentRemover_2_OUTPUT    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)
+FACTORY_DEF * PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    ACCUMULATE_ATTRIBUTES ONE    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT TO LAS __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>LAS<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma><lt>at<gt>Value<lt>openparen<gt>fme_basename<lt>closeparen<gt><comma>LAS<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+LAS_2_DEF LAS
