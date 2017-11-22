@@ -5,9 +5,9 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    "C:\Program Files\FME\fme.exe" U:\cartogra\mkdocs\doc_procesos_lidar\workbench\LASelipsoide_LASgeoide.fmw
-#          --DestDataset_LAS "D:\lidar"
-#          --SourceDataset_LAS "D:\lidar\PNOA_L5_2010_CYL-RIO_25cm_VL_las_sc_496-4686.las"
+#    "C:\Program Files\FME\fme.exe" D:\LASelipsoide_LASgeoide.fmw
+#          --DestDataset_LAS "D:\"
+#          --SourceDataset_LAS "D:\PNOA_L5_2010_CYL-RIO_25cm_VL_las_sc_496-4686.las"
 #    
 #    
 #!   LOG_FILE=""
@@ -682,12 +682,12 @@
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI DIRNAME DestDataset_LAS Destination ASPRS LAS Directory:"
-#!   DEFAULT_VALUE="D:\lidar"
+#!   DEFAULT_VALUE="D:\"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_LAS LAS_Files(*.las;*.laz)|*.las;*.laz|LAS_Files(*.las)|*.las|Compressed_LAS_Files(*.laz)|*.laz|All_files(*.*)|*.* Source ASPRS LAS File(s):"
-#!   DEFAULT_VALUE="D:\lidar\PNOA_L5_2010_CYL-RIO_25cm_VL_las_sc_496-4686.las"
+#!   DEFAULT_VALUE="D:\PNOA_L5_2010_CYL-RIO_25cm_VL_las_sc_496-4686.las"
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -790,9 +790,9 @@
 #! </WORKSPACE>
 FME_PYTHON_VERSION 27
 GUI IGNORE SourceDataset_LAS_1,LAS_IN_EXPOSE_ATTRS_GROUP_LAS_1,LAS_IN_SEARCH_ENVELOPE_MINX_LAS_1,LAS_IN_SEARCH_ENVELOPE_MINY_LAS_1,LAS_IN_SEARCH_ENVELOPE_MAXX_LAS_1,LAS_IN_SEARCH_ENVELOPE_MAXY_LAS_1,LAS_IN_CLIP_TO_ENVELOPE_LAS_1,LAS_IN_NETWORK_AUTHENTICATION_LAS_1,LAS_IN_NETWORK_PROXY_LAS_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_LAS_1,DestDataset_LAS_2,LAS_OUT_VERSION_LAS_2,LAS_OUT_COMPRESSION_LAS_2,_ARCGIS_LAS_DATASET_LAS_2,_COMPUTE_STATISTICS_ON_ARCGIS_LAS_DATASET_LAS_2
-DEFAULT_MACRO DestDataset_LAS D:\lidar
+DEFAULT_MACRO DestDataset_LAS D:\
 GUI DIRNAME DestDataset_LAS Destination ASPRS LAS Directory:
-DEFAULT_MACRO SourceDataset_LAS D:\lidar\PNOA_L5_2010_CYL-RIO_25cm_VL_las_sc_496-4686.las
+DEFAULT_MACRO SourceDataset_LAS D:\PNOA_L5_2010_CYL-RIO_25cm_VL_las_sc_496-4686.las
 GUI MULTIFILE SourceDataset_LAS LAS_Files(*.las;*.laz)|*.las;*.laz|LAS_Files(*.las)|*.las|Compressed_LAS_Files(*.laz)|*.laz|All_files(*.*)|*.* Source ASPRS LAS File(s):
 INCLUDE [ if {{$(DestDataset_LAS)} == {}} { puts_real {Parameter 'DestDataset_LAS' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(SourceDataset_LAS)} == {}} { puts_real {Parameter 'SourceDataset_LAS' must be given a value.}; exit 1; }; ]

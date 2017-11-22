@@ -5,9 +5,9 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    "C:\Program Files\FME\fme.exe" U:\cartogra\Ana\Trabajo_ana\lidar_2016\procesos_fme_lidar\lidar_ndvi_point_cloud_fme.fmw
-#          --DestDataset_LAS "C:\Trabajo_Ana\proceso_las_rioja\salida_classify_ndvi_1x1"
-#          --SourceDataset_LAS "C:\Trabajo_Ana\proceso_las_rioja\salida_classify_merge\597000_4676000_merge.laz"
+#    "C:\Program Files\FME\fme.exe" D:\lidar_ndvi_point_cloud_fme.fmw
+#          --DestDataset_LAS "D:\salida_classify_ndvi_1x1"
+#          --SourceDataset_LAS "D:\597000_4676000_merge.laz"
 #    
 #    
 #!   FME_STROKE_MAX_DEVIATION="0"
@@ -682,12 +682,12 @@
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI DIRNAME DestDataset_LAS Destination ASPRS LAS Folder:"
-#!   DEFAULT_VALUE="C:\Trabajo_Ana\proceso_las_rioja\salida_classify_ndvi_1x1"
+#!   DEFAULT_VALUE="D:\salida_classify_ndvi_1x1"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_LAS LAS_Files(*.las;*.laz;*.zlas;*.lasd)|*.las;*.laz;*.zlas;*.lasd|LAS_Files(*.las)|*.las|Compressed_LAS_Files(*.laz)|*.laz|Esri_Optimized_LAS_Files(*.zlas)|*.zlas|Esri_LAS_Dataset_Files(*.lasd)|*.lasd|All_files(*)|* Source ASPRS LAS File(s):"
-#!   DEFAULT_VALUE="C:\Trabajo_Ana\proceso_las_rioja\salida_classify_merge\597000_4676000_merge.laz"
+#!   DEFAULT_VALUE="D:\597000_4676000_merge.laz"
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -1963,9 +1963,9 @@
 #! </WORKSPACE>
 FME_PYTHON_VERSION 27
 GUI IGNORE SourceDataset_LAS_1,LAS_IN_EXPOSE_ATTRS_GROUP_LAS_1,LAS_IN_SEARCH_ENVELOPE_MINX_LAS_1,LAS_IN_SEARCH_ENVELOPE_MINY_LAS_1,LAS_IN_SEARCH_ENVELOPE_MAXX_LAS_1,LAS_IN_SEARCH_ENVELOPE_MAXY_LAS_1,LAS_IN_CLIP_TO_ENVELOPE_LAS_1,LAS_IN_NETWORK_AUTHENTICATION_LAS_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_LAS_1,DestDataset_LAS_2,LAS_OUT_VERSION_LAS_2,LAS_OUT_COMPRESSION_LAS_2,LAS_OUT_FIXED_GROUP_LAS_2,LAS_OUT_USER_GROUP_LAS_2,LAS_OUT_USER_COMPONENTS_LAS_2,_ARCGIS_LAS_DATASET_LAS_2,_COMPUTE_STATISTICS_ON_ARCGIS_LAS_DATASET_LAS_2,_ZLAS_REARRANGE_POINTS_LAS_2,_ZLAS_POINT_SPACING_SOURCE_LAS_2,_ZLAS_POINT_SPACING_VALUE_LAS_2
-DEFAULT_MACRO DestDataset_LAS C:\Trabajo_Ana\proceso_las_rioja\salida_classify_ndvi_1x1
+DEFAULT_MACRO DestDataset_LAS D:\salida_classify_ndvi_1x1
 GUI DIRNAME DestDataset_LAS Destination ASPRS LAS Folder:
-DEFAULT_MACRO SourceDataset_LAS C:\Trabajo_Ana\proceso_las_rioja\salida_classify_merge\597000_4676000_merge.laz
+DEFAULT_MACRO SourceDataset_LAS D:\597000_4676000_merge.laz
 GUI MULTIFILE SourceDataset_LAS LAS_Files(*.las;*.laz;*.zlas;*.lasd)|*.las;*.laz;*.zlas;*.lasd|LAS_Files(*.las)|*.las|Compressed_LAS_Files(*.laz)|*.laz|Esri_Optimized_LAS_Files(*.zlas)|*.zlas|Esri_LAS_Dataset_Files(*.lasd)|*.lasd|All_files(*)|* Source ASPRS LAS File(s):
 INCLUDE [ if {{$(DestDataset_LAS)} == {}} { puts_real {Parameter 'DestDataset_LAS' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(SourceDataset_LAS)} == {}} { puts_real {Parameter 'SourceDataset_LAS' must be given a value.}; exit 1; }; ]

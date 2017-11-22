@@ -5,8 +5,8 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    "C:\Program Files\FME\fme.exe" "U:\cartogra\mkdocs\doc_procesos_lidar\workbench\Convert_GRD_from Ngrid.fmw"
-#          --DestDataset_TEXTLINE "U:\cartogra\mkdocs\doc_procesos_lidar\workbench\GridData\EGM08_REDNAP.grd"
+#    "C:\Program Files\FME\fme.exe" "U:\Convert_GRD_from Ngrid.fmw"
+#          --DestDataset_TEXTLINE "U:\EGM08_REDNAP.grd"
 #    
 #    
 #!   WORKSPACE_VERSION="1"

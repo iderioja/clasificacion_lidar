@@ -5,9 +5,9 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    "C:\Program Files\FME\fme.exe" U:\cartogra\Ana\Trabajo_ana\lidar_2016\siose\extraer_siose_categorias.fmw
-#          --SourceDataset_FILEGDB "U:\cartogra\Ana\Trabajo_ana\lidar_2016\siose\siose_larioja_base_de_datos_definitiva_2011_2014\base_datos\17_Produccion_11_14.gdb"
-#          --DestDataset_ESRISHAPE "U:\cartogra\Ana\Trabajo_ana\lidar_2016\siose\siose_cat_sio_ccaa"
+#    "C:\Program Files\FME\fme.exe" D:\extraer_siose_categorias.fmw
+#          --SourceDataset_FILEGDB "D:\17_Produccion_11_14.gdb"
+#          --DestDataset_ESRISHAPE "D:\siose_cat_sio_ccaa"
 #    
 #    
 #!   FME_DOCUMENT_GUID="7a6751be-9713-4d8a-b998-a6401d3c2486"
