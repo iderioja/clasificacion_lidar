@@ -1,2 +1,4 @@
-# clasificacion_lidar
-Procesos FME (Workbenchs) para trabajos de clasificación LiDAR
+# doc_procesos_lidar
+Documentación de los procesos de clasificación y cálculo LiDAR
+
+CONTENIDO PROVISIONAL
