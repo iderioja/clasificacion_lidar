@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/procesado/introduccion/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/procesado/preparacion/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/procesado/analisis_y_tratamiento/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/workbenchs/conversion_egm08rednap/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/workbenchs/transformacion_alturas/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/workbenchs/zonificacion_siose/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/workbenchs/clasificacion_lidar/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/workbenchs/mejora_ndvi/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/mejoras/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/mdt_mds/modelos_digitales_del_terreno/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/mdt_mds/modelo_digital_de_elevaciones/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/mdt_mds/sombreado_del_relieve/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/mdt_mds/modelo_digital_de_superficie/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/descarga/pagina_web/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/descarga/mapa_interactivo/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/descarga/servicios_ogc/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/licencia/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/about/</loc>
+     <lastmod>2017-11-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>
